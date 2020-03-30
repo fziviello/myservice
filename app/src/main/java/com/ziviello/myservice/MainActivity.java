@@ -11,6 +11,9 @@ public class MainActivity extends Activity {
 
     private Context ctx;
 
+    public static String  ACTION_HELLO= "HELLO";
+    public static String  ACTION_CIAO= "CIAO";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(ctx, MyService.class);
-                myIntent.setAction("HELLO");
+                myIntent.setAction(ACTION_HELLO);
                 startService(myIntent);
             }
         });
@@ -33,7 +36,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(ctx, MyService.class);
-                myIntent.setAction("CIAO");
+                myIntent.setAction(ACTION_CIAO);
                 startService(myIntent);
             }
         });
@@ -41,6 +44,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        stopService(new Intent(ctx, MyService.class));
         super.onDestroy();
     }
 }

@@ -1,7 +1,14 @@
 # myservice
 Esempio di un servizio
 
-Comandi ADB per testarlo:
+**Comandi ADB per testarlo:**
 
-adb shell startservice -n com.ziviello.myservice/.MyService -a HELLO
-adb shell startservice -n com.ziviello.myservice/.MyService -a CIAO
+`adb shell `
+
+- `am startservice -n com.ziviello.myservice/.MyService -a HELLO`
+
+- `am startservice -n com.ziviello.myservice/.MyService -a CIAO`
+
+- `am startservice -n com.ziviello.myservice/.MyService -a OTHER`
+
+- `am stopservice com.ziviello.myservice/.MyService`
