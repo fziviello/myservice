@@ -1,7 +1,8 @@
 # myservice
-Esempio di un servizio
 
-**Comandi ADB per testarlo:**
+![Android CI](https://github.com/fziviello/myservice/workflows/Android%20CI/badge.svg)
+
+**ADB CONSOLE:**
 
 `adb shell `
 
